@@ -1,0 +1,17 @@
+# Purpose: Local infrastructure services for development.
+services:
+  postgres:
+    image: postgres:16
+    container_name: ai-car-sales-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ai_car_sales
+      POSTGRES_USER: ai_car_user
+      POSTGRES_PASSWORD: ai_car_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

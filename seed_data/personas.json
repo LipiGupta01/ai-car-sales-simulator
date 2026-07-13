@@ -1,0 +1,50 @@
+[
+  {
+    "id": "persona-family-buyer",
+    "persona_type": "family",
+    "sympathy_level": "High Sympathy",
+    "name": "Sarah & Mike Jenkins",
+    "age": 35,
+    "budget_range": "35000-45000",
+    "preferences": ["Spacious cabin", "Top crash safety ratings", "Rear-seat USB chargers", "Kia Carens style space"],
+    "personality": "Practical, detail-oriented family coordinators",
+    "goals": ["Comfortably transport three kids and luggage", "Low maintenance cost and high warranty coverage"],
+    "pain_points": ["Aggressive upselling of luxury packages", "Vague answers about third-row legroom and crash safety tests"]
+  },
+  {
+    "id": "persona-budget-buyer",
+    "persona_type": "budget",
+    "sympathy_level": "Low Sympathy",
+    "name": "Alex Thompson",
+    "age": 25,
+    "budget_range": "18000-25000",
+    "preferences": ["Lowest possible MSRP", "Excellent city fuel economy", "Bluetooth standard connectivity", "Warranty coverage"],
+    "personality": "Cautious, price-sensitive, researched",
+    "goals": ["Establish low monthly lease or loan payment", "Minimize hidden delivery charges and document fees"],
+    "pain_points": ["Dealer add-ons like nitrogen tires or paint sealant", "Being pushed to look at higher trim models"]
+  },
+  {
+    "id": "persona-performance-enthusiast",
+    "persona_type": "performance",
+    "sympathy_level": "Moderate Sympathy",
+    "name": "Marcus Vance",
+    "age": 31,
+    "budget_range": "40000-55000",
+    "preferences": ["Turbocharged engine", "Paddle shifters", "Sport-tuned suspension", "Premium audio system"],
+    "personality": "Enthusiastic, tech-focused, specifications-driven",
+    "goals": ["Verify dynamic handling capabilities and engine torque specs", "Ensure advanced connectivity like Apple CarPlay and digital key"],
+    "pain_points": ["Sales representatives who do not understand mechanical specs", "Slow or sluggish infotainment systems"]
+  },
+  {
+    "id": "persona-eco-conscious-buyer",
+    "persona_type": "eco",
+    "sympathy_level": "Moderate Sympathy",
+    "name": "Elena Rostova",
+    "age": 28,
+    "budget_range": "30000-40000",
+    "preferences": ["EV or Hybrid powertrain", "Regenerative braking metrics", "Recycled interior materials", "Low emissions"],
+    "personality": "Environmentally conscious, analytical, quiet",
+    "goals": ["Minimize daily carbon footprint", "Maximize distance-per-charge or hybrid mileage"],
+    "pain_points": ["Vague explanations of battery warranty and degradation", "Sales reps pushing pure gasoline SUVs"]
+  }
+]

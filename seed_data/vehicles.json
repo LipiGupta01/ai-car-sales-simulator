@@ -1,0 +1,53 @@
+[
+  {
+    "id": "kia-seltos-2025",
+    "make": "Kia",
+    "model": "Seltos",
+    "year": 2025,
+    "msrp": 24500,
+    "category": "Compact SUV",
+    "fuel_type": "Gasoline",
+    "features": [
+      "All-Wheel Drive (AWD) Option",
+      "Kia Drive Wise Safety Suite",
+      "10.25-inch Touchscreen",
+      "Roof Rails",
+      "Smart Key with Push Button Start"
+    ],
+    "inventory_status": "in_stock"
+  },
+  {
+    "id": "kia-sonet-2025",
+    "make": "Kia",
+    "model": "Sonet",
+    "year": 2025,
+    "msrp": 19900,
+    "category": "Subcompact SUV",
+    "fuel_type": "Gasoline",
+    "features": [
+      "Rear-View Camera",
+      "Wireless Apple CarPlay & Android Auto",
+      "8-inch Touchscreen Info System",
+      "Rear Parking Sensors",
+      "High Fuel Efficiency (32 MPG)"
+    ],
+    "inventory_status": "in_stock"
+  },
+  {
+    "id": "kia-carens-2025",
+    "make": "Kia",
+    "model": "Carens",
+    "year": 2025,
+    "msrp": 31000,
+    "category": "Recreational Multi-Utility Vehicle",
+    "fuel_type": "Gasoline / Hybrid Option",
+    "features": [
+      "3-Row 7-Passenger Seating",
+      "One-Touch Electric Tumble Seats",
+      "6 Airbags Standard",
+      "Rear Vent AC Control",
+      "Generous Luggage Compartment Space"
+    ],
+    "inventory_status": "limited"
+  }
+]
