@@ -1,5 +1,4 @@
 services:
-  # Backend Web Service
   - type: web
     name: ai-car-sales-backend
     env: python
@@ -14,27 +13,11 @@ services:
           name: ai-car-sales-db
           property: connectionString
       - key: GROQ_API_KEY
-        sync: false # Must be set in the Render Dashboard env variables
+        sync: false
       - key: MODEL_PROVIDER
         value: groq
       - key: MODEL_NAME
         value: llama-3.3-70b-versatile
-      - key: CORS_ORIGINS
-        value: "https://ai-car-sales-frontend.onrender.com" # Default placeholder, will map to actual frontend url
-
-  # Frontend Web Service (Static Site)
-  - type: web
-    name: ai-car-sales-frontend
-    env: static
-    rootDir: frontend
-    buildCommand: npm install && npm run build
-    publishDir: dist
-    envVars:
-      - key: VITE_API_URL
-        fromService:
-          name: ai-car-sales-backend
-          type: web
-          property: host
 
 databases:
   - name: ai-car-sales-db
