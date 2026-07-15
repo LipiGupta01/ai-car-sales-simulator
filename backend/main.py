@@ -22,16 +22,31 @@ logger = logging.getLogger("main")
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    """Lifecycle events manager to set up database tables in development."""
+    """Lifecycle events manager to set up database tables and seed default data."""
     logger.info("Starting FastAPI application...")
     
-    if settings.app_env == "development":
-        logger.info("Development mode: Verifying/creating database tables via create_all()...")
+    logger.info("Verifying/creating database tables via create_all()...")
+    try:
+        # Create all tables if they do not exist (safe and idempotent)
+        Base.metadata.create_all(bind=engine)
+        logger.info("Database tables verified.")
+        
+        # Run database seeding idempotently
+        from app.core.database import SessionLocal
+        from app.core.seeder import seed_all
+        db = SessionLocal()
         try:
-            Base.metadata.create_all(bind=engine)
-            logger.info("Database tables verified.")
-        except Exception as e:
-            logger.error(f"Error during development table create_all: {e}")
+            logger.info("Running database seeding check...")
+            seed_all(db)
+            logger.info("Database seeding verified.")
+        finally:
+            db.close()
+            
+    except Exception as e:
+        logger.error(f"Error during database table creation or seeding: {e}")
+        if settings.app_env == "production":
+            logger.critical("Critical database initialization error in production.")
+            raise e
             
     yield
     logger.info("Shutting down FastAPI application...")
