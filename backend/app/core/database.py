@@ -19,6 +19,18 @@ db_url = settings.database_url
 if db_url.startswith("postgres://"):
     db_url = db_url.replace("postgres://", "postgresql://", 1)
 
+# Task 3: Print the final resolved database URL host at startup (without credentials) for debugging
+try:
+    from urllib.parse import urlparse
+    parsed = urlparse(db_url)
+    host = parsed.hostname or "unknown"
+    port = parsed.port or "default"
+    print(f"[Startup] Resolved database URL host: {host}:{port}")
+    logger.info(f"Resolved database URL host: {host}:{port}")
+except Exception as parse_err:
+    print(f"[Startup] Could not parse database URL for host logging: {parse_err}")
+    logger.warning(f"Could not parse database URL for host logging: {parse_err}")
+
 engine = None
 
 if db_url.startswith("postgresql"):
